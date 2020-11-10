@@ -66,4 +66,6 @@ def register(request):
         return render(request, "auctions/register.html")
 
 def listing(request, listing):
-    pass
+    return render(request, "auctions/listing.html", {
+        "listing": listing
+    })
