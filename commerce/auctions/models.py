@@ -12,7 +12,7 @@ class Listing(models.Model):
     image = models.URLField(default = "")
     sold = models.BooleanField(default = False)
     category = models.CharField(max_length = 60, default = None)
-    date_created = models.DateTimeField()
+    date_created = models.DateTimeField(auto_now_add = True)
 
 class Bid(models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE)

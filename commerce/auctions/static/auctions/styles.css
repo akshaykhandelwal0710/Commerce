@@ -1,3 +1,14 @@
 body {
     padding: 10px;
 }
+
+.listing{
+    border: 1px solid gray;
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 5px;
+}
+
+code{
+    display: block;
+}

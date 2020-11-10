@@ -8,7 +8,10 @@ from .models import User, Listing, Bid, Comment
 
 
 def index(request):
-    return render(request, "auctions/index.html")
+    return render(request, "auctions/index.html", {
+        "listings": Listing.objects.all(), 
+        "months": ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."]
+    })
 
 
 def login_view(request):

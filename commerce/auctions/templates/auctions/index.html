@@ -2,12 +2,15 @@
 
 {% block body %}
     <h2>Active Listings</h2>
-    {% for listing in listings%}
+    {% for listing in listings %}
         <div class = "listing">
-            <img alt = "No image" href = {{ listing.image }}>
+            <img alt = "No image" href = "{{ listing.image }}">
             <div>
                 <h3> {{ listing.title }} </h3>
-                <h4>  Price: </h4> <span> &#8377; {{ listing.opening }} </span>
+                <b> Price: </b> &#8377; {{ listing.opening }}
+                <code>
+                    Created {{ months[listing.date_created.month] }} {{ listing.date_created.day }}, {{ listing.date_created.year }}, {{ listing.date_created.time }}
+                </code>
             </div>
         </div>
     {% empty %}
